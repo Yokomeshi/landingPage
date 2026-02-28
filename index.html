@@ -18,7 +18,7 @@ layout: base
         {% endif %}
         
         {% if site.compass.email %}
-        <div class="email-container"><p><a href="mailto:whisper@jonlexa.com{{ site.email }}"><i class="fa fa-send"></i> Email </a></p></div>
+        <div class="email-container"><p><a href="mailto:{{ site.compass.email }}"><i class="fa fa-send"></i> Email </a></p></div>
         {% endif %}
         
         {% if site.compass.twitter_username %}
@@ -26,7 +26,7 @@ layout: base
         {% endif %}
         
         {% if site.compass.linkedin_username %}
-        <div class="linkedin_username-container"><p><a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn </a></p></div>
+        <div class="linkedin_username-container"><p><a href="https://linkedin.com/in/{{ site.compass.linkedin_username }}" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn </a></p></div>
         {% endif %}
         
     </header>

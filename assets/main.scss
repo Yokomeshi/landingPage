@@ -65,8 +65,7 @@ since it must be aligned with the content */
 	height: 160px;
 	display: inline-block;
 	background-size: cover;
-	border-radius: 25%;
-	-moz-border-radius: 50%;
+	border-radius: 50%;
 	border: 1.5px solid $background-color;
 	box-shadow: 0 0 0 3px $text-color;
 }
@@ -112,10 +111,7 @@ since it must be aligned with the content */
 hr {
 	border: 0;
 	height: 1px;
-	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
-	background-image: -moz-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
-	background-image: -ms-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
-	background-image: -o-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
+	background-image: linear-gradient(to right, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
 }
 
 /*** footer ***/
