@@ -1,40 +1,44 @@
 ---
 layout: base
 ---
-<div class="wrapper">
-    <header>
-        {% if site.compass.logo %}
-        <div class="logo-container">
-          <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.compass.logo }}')"></a>
-        </div>
-        {% endif %}
+<div class="card">
+    {% if site.compass.logo %}
+    <div class="logo-container">
+      <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.compass.logo }}')"></a>
+    </div>
+    {% endif %}
 
-        {% if site.compass.author %}
-        <div class="author-container"><h1>{{ site.compass.author }}</h1></div>
-        {% endif %}
+    {% if site.compass.author %}
+    <div class="author-container"><h1>{{ site.compass.author }}</h1></div>
+    {% endif %}
 
-        {% if site.compass.tagline %}
-        <i><div class="tagline-container"><p>{{ site.compass.tagline }}</p></div></i>
-        {% endif %}
-        
-        {% if site.compass.email %}
-        <div class="email-container"><p><a href="mailto:{{ site.compass.email }}"><i class="fa fa-send"></i> Email </a></p></div>
-        {% endif %}
-        
-        {% if site.compass.twitter_username %}
-        <div class="twitter_username-container"><p><a href="https://twitter.com/{{ site.compass.twitter_username }}" target="_blank"><i class="fa fa-twitter"></i> Twitter </a></p></div>
-        {% endif %}
-        
-        {% if site.compass.linkedin_username %}
-        <div class="linkedin_username-container"><p><a href="https://linkedin.com/in/{{ site.compass.linkedin_username }}" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn </a></p></div>
-        {% endif %}
-        
-    </header>
-    <main>
-      {% if site.compass.include_content %}
-      <div class="content">
-        {% include content.html %}
-      </div>
+    {% if site.compass.tagline %}
+    <div class="tagline-container">{{ site.compass.tagline }}</div>
+    {% endif %}
+
+    <hr>
+
+    <div class="social-links">
+      {% if site.compass.twitter_username %}
+      <a href="https://twitter.com/{{ site.compass.twitter_username }}" target="_blank">Twitter</a>
       {% endif %}
-    </main>
+      {% if site.compass.twitter_username and site.compass.linkedin_username %}
+      <span class="sep">&middot;</span>
+      {% endif %}
+      {% if site.compass.linkedin_username %}
+      <a href="https://linkedin.com/in/{{ site.compass.linkedin_username }}" target="_blank">LinkedIn</a>
+      {% endif %}
+      {% if site.compass.linkedin_username and site.compass.email %}
+      <span class="sep">&middot;</span>
+      {% endif %}
+      {% if site.compass.email %}
+      <a href="mailto:{{ site.compass.email }}">Email</a>
+      {% endif %}
+    </div>
+
+    {% if site.compass.include_content %}
+    <div class="content">
+      {% include content.html %}
+    </div>
+    {% endif %}
 </div>
